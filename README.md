@@ -56,7 +56,7 @@ npm run dev
 ```
 The app will now be running on http://localhost:3000 🚀
 
-##🧠 Tech Stack
+## 🧠 Tech Stack
 Next.js – React framework for server-side rendering and routing.
 
 TypeScript – Type safety and scalability.
