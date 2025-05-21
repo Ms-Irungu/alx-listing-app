@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ALX Listing App 🏡
 
-## Getting Started
+The **ALX Listing App** is a modern, scalable web application built to simulate an Airbnb-style property listing platform. Developed using **Next.js**, **TypeScript**, **TailwindCSS**, and **ESLint**, this project lays the groundwork for a responsive and maintainable listing page, setting the stage for more advanced functionality in future milestones.
 
-First, run the development server:
+---
 
+## 🚀 Project Goals
+
+- Scaffold a clean and scalable Next.js project tailored for production readiness.
+- Implement TypeScript to enforce type safety and ensure consistent, bug-free code.
+- Use TailwindCSS to create beautiful, responsive UI components quickly.
+- Create a well-structured folder architecture for long-term scalability and readability.
+- Build reusable UI components such as **Card** and **Button** to streamline development.
+
+---
+
+## 🗂️ Project Structure
+
+Here’s a quick breakdown of the key folders:
+
+### `/components`
+Contains reusable UI components such as:
+- `common/Card.tsx`: Displays property details.
+- `common/Button.tsx`: Handles button actions like "Book Now", "Learn More", etc.
+
+### `/interfaces`
+Houses all the TypeScript interface definitions used throughout the project (e.g., `CardProps`, `ButtonProps`). This ensures strong typing and improved code maintainability.
+
+### `/constants`
+Stores constant values like API endpoints, configuration settings, and UI strings to centralize and reuse important data.
+
+### `/public/assets`
+Contains static assets such as images and SVGs used throughout the application. These assets can be accessed via public URLs in the app.
+
+---
+
+## 🛠️ Getting Started Locally
+
+To run the project on your local machine, follow these steps:
+
+### 1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/alx-listing-app.git
+cd alx-listing-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+Make sure you have Node.js v16+ installed, then run:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 2. Start the Development Server
+```bash
+npm run dev
+```
+The app will now be running on http://localhost:3000 🚀
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🧠 Tech Stack
+Next.js – React framework for server-side rendering and routing.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+TypeScript – Type safety and scalability.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TailwindCSS – Utility-first CSS framework for rapid UI development.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+ESLint – Code linting and formatting.
