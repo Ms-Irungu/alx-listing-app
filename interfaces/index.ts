@@ -1,5 +1,9 @@
 import { ReactNode } from "react";  
 
+export interface LayoutProps {
+  children: ReactNode;
+}
+
 // Interface for the Button component
 export interface ButtonProps {
   children: ReactNode;

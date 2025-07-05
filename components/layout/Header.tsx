@@ -6,58 +6,61 @@ import Button from '@/components/common/Button';
 
 const Header: React.FC = () => {
     return (
-        <header className='bg-white border-b border-grey-50 shadow-sm'>
+        <header className='bg-white border-b border-gray-300 p-4'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     {/* Logo */}
                     <div>
                         <Image
-                            src="public/assets/Logo Showcase.png"
+                            src="/assets/Logo Showcase.png"
                             alt="Logo"
-                            className="w-full h-8"
+                            width={150}
+                            height={32}
+                            className="w-full h-15"
+                            
                         />
                     </div>
 
                     {/* Search Bar */}
                     <div className='flex-1 mx-8 max-w-3xl'>
-                        <div className='flex items-center border border-gray-50 rounded-full shadow-sm hover:shadow-md transition-shadow'>
+                        <div className='flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-shadow'>
                             {/* Location */}
-                            <div className='flex-1 px-6 py-3 border-r border-gray-50'>
-                                <div className='text-xs font-semibold text-gray-800'>Location</div>
+                            <div className='flex-1 px-6 py-3 border-r border-gray-200'>
+                                <div className='text-sm font-semibold text-gray-800'>Location</div>
                                 <input
                                     type="text"
                                     placeholder="Search for destination"
-                                    className="w-full text-sm text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
+                                    className="w-full text-xs text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
                                 />
                             </div>
 
                             {/* Check In */}
                             <div className='flex-1 px-6 py-3 border-r border-gray-200'>
-                                <div className='text-xs font-semibold text-gray-800'>Check In</div>
+                                <div className='text-sm font-semibold text-gray-800'>Check In</div>
                                 <input
                                     type="date"
                                     placeholder="Add date"
-                                    className="w-full text-sm text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
+                                    className="w-full text-xs text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
                                 />
                             </div>
 
                             {/* Check Out */}
                             <div className='flex-1 px-6 py-3 border-r border-gray-200'>
-                                <div className='text-xs font-semibold text-gray-800'>Check Out</div>
+                                <div className='text-sm font-semibold text-gray-800'>Check Out</div>
                                 <input
                                     type="date"
                                     placeholder="Add date"
-                                    className="w-full text-sm text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
+                                    className="w-full text-xs text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
                                 />
                             </div>
                             {/* People */}
                             <div className='flex-1 px-6 py-3'>
-                                <div className='text-xs font-semibold text-gray-800'>People</div>
+                                <div className='text-sm font-semibold text-gray-800'>People</div>
                                 <input
                                     type="number"
                                     placeholder="Add guests"
                                     min="1"
-                                    className="w-full text-sm text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
+                                    className="w-full text-xs text-gray-900 placeholder-gray-500 border-none outline-none bg-transparent"
                                 />
                             </div>
 
