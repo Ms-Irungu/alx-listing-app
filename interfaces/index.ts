@@ -1,14 +1,5 @@
 import { ReactNode } from "react";  
 
-// Interface for the Card component
-export interface CardProps {
-  title: string;
-  description: string;
-  image: string;
-  rating: number;
-  price: number;
-}
-
 // Interface for the Button component
 export interface ButtonProps {
   children: ReactNode;
@@ -17,4 +8,23 @@ export interface ButtonProps {
   disabled?: boolean;
   onClick: () => void;
   type?: 'button' | 'submit' | 'reset';
+}
+
+export interface PropertyProps {
+  name: string;
+  address: {
+    state: string;
+    city: string;
+    country: string;
+  };
+  rating: number;
+  category: string[];
+  price: number;
+  offers: {
+    bed: string;
+    shower: string;
+    occupants: string;
+  };
+  image: string;
+  discount?: string; // Optional field for discount
 }

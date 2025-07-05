@@ -1,51 +1,68 @@
 import React from 'react';
-import { CardProps } from '../../interfaces';
+import { PropertyProps } from '../../interfaces';
 import Image from 'next/image';
-import { Star, BedDouble, Bath, Users } from 'lucide-react';
+import { Star, BedDouble, Bath, Users, BadgeDollarSign } from 'lucide-react';
 
-const Card: React.FC<CardProps> = ({ title, description, image, rating, price }) => {
+const Card: React.FC<PropertyProps> = ({
+  image, 
+  discount, 
+  category, 
+  name, 
+  rating, 
+  address, 
+  offers, 
+  price
+ }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer transform hover:scale-105">
       {/* Image Section */}
       <div className="relative">
         <Image
           src={image}
-          alt={title}
+          alt={name}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
         />
+        <div className='absolute top-3 left-3 bg-green-500 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1'>
+          <BadgeDollarSign className='w-4 h-4 text-white' />
+          <span className='text-sm font-semibold text-white'>{discount} Off</span>
+        </div>
       </div>
           {/* Other Information */}
       <div className="p-5">
                     {/* First Div with span texts */}
         <div className='flex flex-wrap gap-1 mb-4'>
-          <span className='text-sm bg-gray-50 rounded-lg'>Top Villa</span>
-          <span className='text-sm bg-gray-50 rounded-lg'>Self CheckIn</span>
-          <span className='text-sm bg-gray-50 rounded-lg'>Free Reschedule</span>
+          {category.map((aCategory, index) => (
+            <span 
+            key={index}
+            className='text-sm bg-gray-50 rounded-lg'>
+              {aCategory}
+            </span>
+          ))}
         </div>
                     {/* Title, Rating */}
         <div className='flex items-center justify-between mb-3'>
-          <h3 className='font-semibold text-lg text-gray-900'>{title}</h3>
+          <h3 className='font-semibold text-lg text-gray-900'>{name}</h3>
           <div>
             <Star className='text-yellow-400 fill-current w-4 h-4' />
             <span className='text-sm font-medium'>{rating}</span>
           </div>
         </div>
                 {/* Description */}
-        <p className='text-sm text-gray-600 mb-4 line-clamp-2'>{description}</p>
+        <p className='text-sm text-gray-600 mb-4 line-clamp-2'>{address.state}, {address.city}, {address.country}</p>
                 {/* Amenities and Price */}
         <div className='flex items-center justify-between'>
           <div className='flex items-center justify-between text-gray-500 text-sm'>
             <div className='flex items-center gap-1'>
               <BedDouble className='w-4 h-4' />
-              <span>2 Beds</span>
+              <span>{offers.bed}</span>
             </div>
             <div className='flex items-center gap-1'>
               <Bath className='w-4 h-4' />
-              <span>2 Baths</span>
+              <span>{offers.shower}</span>
             </div>
             <div className='flex items-center gap-1'>
               <Users className='w-4 h-4' />
-              <span>4 Guests</span>
+              <span>{offers.occupants}</span>
             </div>
           </div>
           <div className='flex items-center gap-1'>
