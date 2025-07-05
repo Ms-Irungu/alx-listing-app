@@ -8,6 +8,7 @@ export interface ButtonProps {
   disabled?: boolean;
   onClick: () => void;
   type?: 'button' | 'submit' | 'reset';
+  className?: string;
 }
 
 export interface PropertyProps {
