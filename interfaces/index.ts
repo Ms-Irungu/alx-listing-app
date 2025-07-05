@@ -2,7 +2,9 @@
 export interface CardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  image: string;
+  rating: number;
+  price: number;
 }
 
 // Interface for the Button component
